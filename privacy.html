@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Scriblo - Privacy Policy. Read about how we protect your data and privacy while using the Scriblo drawing app.">
+    <title>Scriblo - Privacy Policy</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f5ff',
+                            100: '#e5edff',
+                            200: '#cddbfe',
+                            300: '#a4c2fe',
+                            400: '#769cfc',
+                            500: '#4f71f9',
+                            600: '#354eee',
+                            700: '#2a3bd7',
+                            800: '#2532ae',
+                            900: '#232f8b',
+                            950: '#171e55',
+                        },
+                        dark: {
+                            bg: '#0f172a',
+                            surface: '#1e293b',
+                            border: '#334155'
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'blob': 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-dark-bg text-slate-200 font-sans antialiased overflow-x-hidden selection:bg-brand-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-dark-bg/50 backdrop-blur-lg border-b border-white/10 py-4 navbar-scrolled">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-3 cursor-pointer group" onclick="window.location.href='index.html'">
+                <div class="w-10 h-10 rounded-xl overflow-hidden bg-gradient-to-tr from-brand-600 to-purple-500 p-0.5 shadow-lg shadow-brand-500/20 group-hover:shadow-brand-500/40 transition-shadow">
+                    <img src="assets/logo.png" alt="Scriblo Logo" class="w-full h-full object-cover rounded-[10px] bg-dark-surface">
+                </div>
+                <span class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">Scriblo</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html#features" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Features</a>
+                <a href="index.html#download" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Download</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="index.html" class="px-6 py-2.5 rounded-full bg-white text-dark-bg font-semibold text-sm hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all duration-300 active:scale-95">
+                    Return to Home
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="relative min-h-screen pt-32 pb-24 px-4 overflow-hidden flex flex-col items-center">
+        <!-- Background Ambient Effects -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-600/10 rounded-full mix-blend-screen filter blur-[100px] animate-blob"></div>
+        <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-2000"></div>
+
+        <!-- Privacy Card Container -->
+        <div class="w-full max-w-4xl bg-dark-surface/50 border border-white/10 rounded-[2.5rem] backdrop-blur-xl p-8 sm:p-12 shadow-2xl relative z-10">
+            <h1 class="text-4xl sm:text-5xl font-black text-white tracking-tight mb-2">Privacy Policy</h1>
+            <p class="text-xs text-slate-400 font-semibold uppercase tracking-wider mb-8">Last Updated : May 20, 2026</p>
+
+            <div class="flex flex-col gap-8">
+                <!-- Intro Card -->
+                <div class="p-6 rounded-2xl bg-gradient-to-tr from-brand-600/20 to-purple-600/20 border border-brand-500/20 shadow-lg">
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-3 flex items-center gap-2">
+                        <span>🎨</span> Enter Scriblo: Draw. Create. Inspire! – the ultimate canvas for your creativity!
+                    </h3>
+                    <p class="text-slate-300 leading-relaxed text-sm mb-4">
+                        Step into a world where YOU are the artist! Sketch, paint, manage layers, and make it colorful with our premium drawing tools. Paint landscapes, design characters, or perfect symmetrical drafts — nothing can stop your flow! 🎨🚀
+                    </p>
+                    <p class="text-slate-300 leading-relaxed text-sm font-semibold">
+                        Your mission? Draw your ideas, master custom brushes, and express your raw imagination on a beautiful digital canvas!
+                    </p>
+                </div>
+
+                <!-- How to Create -->
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                        <span>🖌️</span> How to Create & Draw:
+                    </h3>
+                    <ul class="flex flex-col gap-2.5 pl-2 text-slate-300 text-sm leading-relaxed">
+                        <li class="flex items-start gap-2.5">
+                            <span class="text-brand-400 mt-1">•</span>
+                            <span>Tap your screen to select paint tools, adjust brush stroke widths, or choose rich custom colors.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="text-brand-400 mt-1">•</span>
+                            <span>Add layers to separate your sketches, color fills, shadow details, and background themes easily.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="text-brand-400 mt-1">•</span>
+                            <span>Select from 10+ symmetrical shape templates (circles, triangles, ovals) to draft layouts instantly.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="text-brand-400 mt-1">•</span>
+                            <span>Save your completed art canvas directly to your device gallery or share your masterpiece with others.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Why You'll Love -->
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                        <span>✨</span> Why You'll Love Scriblo: Draw. Create. Inspire!
+                    </h3>
+                    <ul class="flex flex-col gap-3 pl-2 text-slate-300 text-sm leading-relaxed">
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-400">🚀</span>
+                            <span><strong>Fast-paced canvas loading</strong> with satisfying lag-free paint stroke mechanics.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-400">🎨</span>
+                            <span><strong>Rich layers management</strong> panel to build professional digital art structure.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-400">📐</span>
+                            <span><strong>Perfect vector shapes</strong> outline helper to draft symmetrical geometric templates instantly.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-400">🖌️</span>
+                            <span><strong>A gorgeous collection</strong> of customizable brush types, erasers, and utility palettes.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-400">📱</span>
+                            <span><strong>Sleek, simple controls</strong> that are fully optimized for smooth, relaxed mobile sketching.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-400">💾</span>
+                            <span><strong>100% Offline capability</strong> — draw and design anywhere, anytime, without any Wi-Fi needed.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-400">🌟</span>
+                            <span><strong>Completely free</strong> to unleash your creative potential with no paywalls or locks.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Callout Card -->
+                <div class="p-6 rounded-2xl bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/20 shadow-lg">
+                    <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                        <span>🏆</span> Become the Ultimate Creator!
+                    </h3>
+                    <p class="text-slate-300 leading-relaxed text-sm mb-4">
+                        Plan your strokes, select your details, and paint strategies to survive art blocks. Only the most creative and inspired minds can paint the highest forms of masterpieces!
+                    </p>
+                    <p class="text-brand-300 leading-relaxed text-sm font-bold flex items-center gap-2">
+                        <span>🖌️</span> Download Scriblo: Draw. Create. Inspire! now and start painting your way to victory! 🎨🔥
+                    </p>
+                </div>
+
+                <!-- Divider -->
+                <div class="h-px bg-white/10 my-4"></div>
+
+                <!-- Collecting and Using Your Personal Data -->
+                <div class="flex flex-col gap-6">
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Collecting and Using Your Personal Data</h2>
+                    
+                    <div class="flex flex-col gap-3">
+                        <h4 class="text-base font-bold text-brand-400 uppercase tracking-wider">Data Sharing</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            We <strong>do not sell, share, or trade your personal data</strong> with any third parties. Your drawings are stored locally on your device, and we do not capture, upload, or transmit any art files to external servers.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col gap-3">
+                        <h4 class="text-base font-bold text-brand-400 uppercase tracking-wider">Permissions:</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-1">
+                            Scriblo requires the following optional permissions to function fully:
+                        </p>
+                        <ul class="flex flex-col gap-2 text-slate-300 text-sm leading-relaxed pl-2">
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-400 mt-1">•</span>
+                                <span><strong>Storage Write Permission:</strong> Required solely to save your canvas drawings directly to your device's photo gallery (optional).</span>
+                            </li>
+                        </ul>
+                        <p class="text-slate-400 text-xs mt-1">
+                            *No other personal, tracking, or network permissions are requested by our application.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col gap-3">
+                        <h4 class="text-base font-bold text-brand-400 uppercase tracking-wider">Children's Privacy</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Our application does not address anyone under the age of 13. We do not collect any personal information from children through our application. All drawing activity takes place isolated on the user's phone.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col gap-3">
+                        <h4 class="text-base font-bold text-brand-400 uppercase tracking-wider">Contact Us</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            If you have any questions about this Privacy Policy, you can contact us at: 
+                            <a href="mailto:kaliosstudio.dev@gmail.com" class="text-brand-300 hover:text-brand-200 underline font-semibold transition-colors">kaliosstudio.dev@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Return Button -->
+                <div class="flex justify-center mt-6">
+                    <a href="index.html" class="px-8 py-3.5 rounded-full bg-gradient-to-r from-brand-500 to-purple-600 text-white font-bold text-base shadow-lg shadow-brand-500/20 hover:shadow-brand-500/40 hover:scale-105 transition-all duration-300 active:scale-95">
+                        Return to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footnote text matching Flappy Rush format -->
+        <p class="text-[10px] text-slate-500 tracking-wide mt-8 text-center max-w-xl relative z-10 leading-relaxed">
+            we may update our privacy policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.<br>
+            Scriblo © 2026. All rights reserved.
+        </p>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 py-12 px-6 bg-dark-bg relative z-10">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-3" onclick="window.location.href='index.html'">
+                <div class="w-8 h-8 rounded-lg overflow-hidden bg-gradient-to-tr from-brand-600 to-purple-500 p-0.5">
+                    <img src="assets/logo.png" alt="Scriblo Logo" class="w-full h-full object-cover rounded-[6px] bg-dark-surface">
+                </div>
+                <span class="text-xl font-bold text-white">Scriblo</span>
+            </div>
+            
+            <div class="flex items-center gap-6 text-sm text-slate-400">
+                <a href="privacy.html" class="text-white font-medium hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                <a href="mailto:kaliosstudio.dev@gmail.com" class="hover:text-white transition-colors">Contact Us</a>
+            </div>
+            
+            <div class="text-sm text-slate-500">
+                &copy; 2026 Kalios Studio. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

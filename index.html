@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Scriblo - The ultimate playground for your creativity. Draw, create stickers, and let your imagination run wild with our premium drawing app.">
+    <title>Scriblo - Unleash Your Creativity</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f5ff',
+                            100: '#e5edff',
+                            200: '#cddbfe',
+                            300: '#a4c2fe',
+                            400: '#769cfc',
+                            500: '#4f71f9',
+                            600: '#354eee',
+                            700: '#2a3bd7',
+                            800: '#2532ae',
+                            900: '#232f8b',
+                            950: '#171e55',
+                        },
+                        dark: {
+                            bg: '#0f172a',
+                            surface: '#1e293b',
+                            border: '#334155'
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'blob': 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-dark-bg text-slate-200 font-sans antialiased overflow-x-hidden selection:bg-brand-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-dark-bg/50 backdrop-blur-lg border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3 cursor-pointer group">
+                <div class="w-10 h-10 rounded-xl overflow-hidden bg-gradient-to-tr from-brand-600 to-purple-500 p-0.5 shadow-lg shadow-brand-500/20 group-hover:shadow-brand-500/40 transition-shadow">
+                    <img src="assets/logo.png" alt="Scriblo Logo" class="w-full h-full object-cover rounded-[10px] bg-dark-surface">
+                </div>
+                <span class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">Scriblo</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#features" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Features</a>
+                <a href="#download" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Download</a>
+                <a href="privacy.html" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Privacy</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="#download" class="px-6 py-2.5 rounded-full bg-white text-dark-bg font-semibold text-sm hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all duration-300 active:scale-95">
+                    Get App
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-28 pb-16 px-6 overflow-hidden">
+        <!-- Background Ambient Effects -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-600/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob"></div>
+        <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-purple-600/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-2000"></div>
+        <div class="absolute -bottom-32 left-1/2 w-96 h-96 bg-blue-600/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-4000"></div>
+
+        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            <!-- Hero Text -->
+            <div class="flex flex-col gap-8 max-w-2xl lg:col-span-6">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md w-fit">
+                    <span class="flex w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                    <span class="text-xs font-semibold tracking-wider text-slate-300 uppercase">Now available on Android</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-6xl font-black leading-tight tracking-tight text-white">
+                    Draw. Create.<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-purple-400 to-pink-400">Inspire your world.</span>
+                </h1>
+                
+                <p class="text-lg md:text-xl text-slate-400 leading-relaxed max-w-xl">
+                    Scriblo is the ultimate drawing companion. Sketch ideas, organize artwork with layers, perfect vector shapes, and unleash your creative potential on a beautiful digital canvas.
+                </p>
+                
+                <div class="flex flex-wrap items-center gap-4 mt-4">
+                    <a href="#download" class="inline-block hover:scale-105 transition-transform duration-300">
+                        <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" class="h-16" />
+                    </a>
+                    <a href="#features" class="px-8 py-4 rounded-full bg-white/5 border border-white/10 text-white font-semibold text-lg hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 active:translate-y-0 flex items-center gap-2">
+                        <span>Explore Features</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+                    </a>
+                </div>
+                
+                <div class="flex items-center gap-6 mt-8 pt-8 border-t border-white/10">
+                    <div class="flex flex-col">
+                        <span class="text-3xl font-bold text-white">4.9</span>
+                        <span class="text-sm text-slate-400">App Rating</span>
+                    </div>
+                    <div class="w-px h-12 bg-white/10"></div>
+                    <div class="flex flex-col">
+                        <span class="text-3xl font-bold text-white">10k+</span>
+                        <span class="text-sm text-slate-400">Downloads</span>
+                    </div>
+                    <div class="w-px h-12 bg-white/10"></div>
+                    <div class="flex flex-col">
+                        <span class="text-3xl font-bold text-white">4.8+ MB</span>
+                        <span class="text-sm text-slate-400">Ultra Lightweight</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hero Image Collage -->
+            <div class="relative w-full h-[550px] flex justify-center items-center lg:col-span-6 mt-12 lg:mt-0">
+                <!-- Background glow -->
+                <div class="absolute w-[80%] h-[80%] bg-gradient-to-tr from-brand-500/20 to-purple-500/20 rounded-full filter blur-3xl"></div>
+                
+                <!-- Left floating phone mockup (tilted left, behind) -->
+                <div class="absolute left-4 md:left-12 top-1/2 -translate-y-1/2 w-[180px] sm:w-[200px] h-[360px] sm:h-[400px] rounded-[2rem] border border-white/10 bg-dark-surface/80 p-1.5 shadow-2xl rotate-[-12deg] -translate-x-8 scale-90 opacity-80 hover:opacity-100 hover:scale-95 transition-all duration-500 hover:z-30 hover:rotate-[-6deg] group/left z-10">
+                    <div class="w-full h-full rounded-[1.75rem] overflow-hidden bg-slate-900 relative">
+                        <img src="assets/smooth-drawing.jpg" alt="Smooth Drawing App Screen" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-bg/40 to-transparent"></div>
+                    </div>
+                </div>
+
+                <!-- Right floating phone mockup (tilted right, behind) -->
+                <div class="absolute right-4 md:right-12 top-1/2 -translate-y-1/2 w-[180px] sm:w-[200px] h-[360px] sm:h-[400px] rounded-[2rem] border border-white/10 bg-dark-surface/80 p-1.5 shadow-2xl rotate-[12deg] translate-x-8 scale-90 opacity-80 hover:opacity-100 hover:scale-95 transition-all duration-500 hover:z-30 hover:rotate-[6deg] group/right z-10">
+                    <div class="w-full h-full rounded-[1.75rem] overflow-hidden bg-slate-900 relative">
+                        <img src="assets/layers.png" alt="Layers Management App Screen" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-bg/40 to-transparent"></div>
+                    </div>
+                </div>
+
+                <!-- Center Phone Mockup (focused, in front) -->
+                <div class="absolute top-1/2 -translate-y-1/2 w-[220px] sm:w-[240px] h-[440px] sm:h-[480px] rounded-[2.5rem] border border-white/20 bg-dark-surface/90 p-2 shadow-[0_20px_50px_rgba(0,0,0,0.8)] z-20 hover:scale-105 transition-all duration-500 animate-float group/center">
+                    <!-- Speaker/Notch -->
+                    <div class="absolute top-4 left-1/2 -translate-x-1/2 w-28 h-5 bg-black rounded-full z-30 flex items-center justify-center">
+                        <div class="w-12 h-1 bg-neutral-800 rounded-full"></div>
+                    </div>
+                    <div class="w-full h-full rounded-[2.25rem] overflow-hidden bg-slate-950 relative border border-white/5">
+                        <img src="assets/skriblo-hero.png" alt="Skriblo Main Screen" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-bg/20 to-transparent"></div>
+                    </div>
+                    
+                    <!-- Floating badge left -->
+                    <div class="absolute -left-12 sm:-left-16 bottom-20 px-3 py-1.5 bg-dark-surface/95 backdrop-blur-md border border-white/10 rounded-xl shadow-xl flex items-center gap-2 group-hover/center:-translate-x-2 transition-transform duration-300">
+                        <span class="w-2 h-2 rounded-full bg-brand-400"></span>
+                        <span class="text-[10px] font-bold text-white tracking-wide">100% Free</span>
+                    </div>
+                    
+                    <!-- Floating badge right -->
+                    <div class="absolute -right-12 sm:-right-16 top-24 px-3 py-1.5 bg-dark-surface/95 backdrop-blur-md border border-white/10 rounded-xl shadow-xl flex items-center gap-2 group-hover/center:translate-x-2 transition-transform duration-300">
+                        <span class="w-2 h-2 rounded-full bg-pink-400"></span>
+                        <span class="text-[10px] font-bold text-white tracking-wide">Smooth Drawing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-32 px-6 relative overflow-hidden border-t border-white/5 bg-slate-950/20">
+        <!-- Radial accent background -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-500/5 rounded-full filter blur-[150px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-28">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-xs font-semibold mb-4 tracking-wider uppercase">
+                    Powerful Creative Suite
+                </div>
+                <h2 class="text-4xl md:text-5xl font-black mb-6 tracking-tight text-white">Everything you need to <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-purple-400">create masterpieces</span></h2>
+                <p class="text-lg text-slate-400 leading-relaxed">Scriblo packs professional-grade drawing tools, layers, and custom shape builders into an interface that feels clean and intuitive.</p>
+            </div>
+            
+            <div class="flex flex-col gap-32">
+                <!-- Feature 1: Smooth Drawing -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="flex flex-col gap-6 order-2 lg:order-1">
+                        <div class="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
+                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
+                        </div>
+                        <h3 class="text-3xl md:text-4xl font-extrabold text-white">Smooth Drawing & Brushes</h3>
+                        <p class="text-slate-400 text-lg leading-relaxed">
+                            Experience incredibly smooth, lag-free stroke dynamics. With a powerful brush settings menu, you can customize widths, select colors, erase, and draw natural-feeling sketches effortlessly.
+                        </p>
+                        <ul class="flex flex-col gap-3 mt-2 text-slate-300">
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-purple-500/20 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xs font-bold flex-shrink-0">✓</span>
+                                <span>Lag-free drawing & paint dynamics</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-purple-500/20 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xs font-bold flex-shrink-0">✓</span>
+                                <span>Advanced tools sidebar for easy color and width changes</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-purple-500/20 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xs font-bold flex-shrink-0">✓</span>
+                                <span>Gorgeous canvas landscape drawing capabilities</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="relative order-1 lg:order-2 flex justify-center items-center group">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-purple-500/10 to-pink-500/10 rounded-[2.5rem] transform rotate-2 scale-105 filter blur-xl group-hover:scale-110 transition-all duration-500"></div>
+                        <div class="relative w-full max-w-[320px] sm:max-w-[360px] aspect-[9/16] rounded-[2.5rem] border border-white/10 bg-dark-surface/50 backdrop-blur-xl p-2 shadow-2xl overflow-hidden hover:-translate-y-2 transition-transform duration-500">
+                            <img src="assets/smooth-drawing.jpg" alt="Smooth Drawing App Interface" class="w-full h-full object-cover rounded-[2.25rem]">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 2: Layers & Organization -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="relative flex justify-center items-center group">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-pink-500/10 to-orange-500/10 rounded-[2.5rem] transform -rotate-2 scale-105 filter blur-xl group-hover:scale-110 transition-all duration-500"></div>
+                        <div class="relative w-full max-w-[320px] sm:max-w-[360px] aspect-[9/16] rounded-[2.5rem] border border-white/10 bg-dark-surface/50 backdrop-blur-xl p-2 shadow-2xl overflow-hidden hover:-translate-y-2 transition-transform duration-500">
+                            <img src="assets/layers.png" alt="Layers Management App Interface" class="w-full h-full object-cover rounded-[2.25rem]">
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-6">
+                        <div class="w-12 h-12 rounded-2xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400">
+                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg>
+                        </div>
+                        <h3 class="text-3xl md:text-4xl font-extrabold text-white">Full Layers Panel</h3>
+                        <p class="text-slate-400 text-lg leading-relaxed">
+                            Organize your artwork with ease using a full, professional-grade layers manager. Lock, hide, show, add, and re-order layers (Sketch, Color, Shadows, Background) to keep your project structure clean and manageable.
+                        </p>
+                        <ul class="flex flex-col gap-3 mt-2 text-slate-300">
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-pink-500/20 border border-pink-500/30 flex items-center justify-center text-pink-400 text-xs font-bold flex-shrink-0">✓</span>
+                                <span>Organize layers to separate sketch, color, and shadows</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-pink-500/20 border border-pink-500/30 flex items-center justify-center text-pink-400 text-xs font-bold flex-shrink-0">✓</span>
+                                <span>Toggle visibility to inspect specific layers in a click</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-pink-500/20 border border-pink-500/30 flex items-center justify-center text-pink-400 text-xs font-bold flex-shrink-0">✓</span>
+                                <span>Lock key layers to protect them from accidental edits</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Feature 3: Shapes & Tools -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="flex flex-col gap-6 order-2 lg:order-1">
+                        <div class="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
+                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" /></svg>
+                        </div>
+                        <h3 class="text-3xl md:text-4xl font-extrabold text-white">Advanced Shapes & Outlines</h3>
+                        <p class="text-slate-400 text-lg leading-relaxed">
+                            Create geometric perfection with a complete set of template tools. Quickly spawn lines, arrows, rectangles, circles, ovals, triangles, diamonds, and hexagons with custom strokes.
+                        </p>
+                        <ul class="flex flex-col gap-3 mt-2 text-slate-300">
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-blue-500/20 border border-blue-500/30 flex items-center justify-center text-blue-400 text-xs font-bold flex-shrink-0">✓</span>
+                                <span>10+ basic and advanced shapes instantly scalable</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-blue-500/20 border border-blue-500/30 flex items-center justify-center text-blue-400 text-xs font-bold flex-shrink-0">✓</span>
+                                <span>Perfect symmetry options for rapid vector outline sketching</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-blue-500/20 border border-blue-500/30 flex items-center justify-center text-blue-400 text-xs font-bold flex-shrink-0">✓</span>
+                                <span>Characters, animals, and custom layout templates</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="relative order-1 lg:order-2 flex justify-center items-center group">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-500/10 to-cyan-500/10 rounded-[2.5rem] transform rotate-2 scale-105 filter blur-xl group-hover:scale-110 transition-all duration-500"></div>
+                        <div class="relative w-full max-w-[320px] sm:max-w-[360px] aspect-[9/16] rounded-[2.5rem] border border-white/10 bg-dark-surface/50 backdrop-blur-xl p-2 shadow-2xl overflow-hidden hover:-translate-y-2 transition-transform duration-500">
+                            <img src="assets/shapes-tools.png" alt="Shapes and Templates App Interface" class="w-full h-full object-cover rounded-[2.25rem]">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download CTA Section -->
+    <section id="download" class="py-24 px-6">
+        <div class="max-w-5xl mx-auto relative rounded-[3rem] overflow-hidden">
+            <!-- CTA Background -->
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-900 to-purple-900"></div>
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] [mask-image:linear-gradient(to_bottom,white,transparent)]"></div>
+            
+            <div class="relative z-10 p-12 md:p-20 text-center flex flex-col items-center">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6 text-white">Ready to start drawing?</h2>
+                <p class="text-xl text-brand-100 max-w-2xl mb-10">Join thousands of creators using Scriblo to bring their ideas to life. Download now and get started for free.</p>
+                
+                <a href="#" class="inline-block hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.2)] rounded-2xl transition-all duration-300">
+                    <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" class="h-20" />
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 py-12 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg overflow-hidden bg-gradient-to-tr from-brand-600 to-purple-500 p-0.5">
+                    <img src="assets/logo.png" alt="Scriblo Logo" class="w-full h-full object-cover rounded-[6px] bg-dark-surface">
+                </div>
+                <span class="text-xl font-bold text-white">Scriblo</span>
+            </div>
+            
+            <div class="flex items-center gap-6 text-sm text-slate-400">
+                <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                <a href="#" class="hover:text-white transition-colors">Contact Us</a>
+            </div>
+            
+            <div class="text-sm text-slate-500">
+                &copy; 2026 Kalios Studio. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+</html>
