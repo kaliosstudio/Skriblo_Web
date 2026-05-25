@@ -1,37 +1,71 @@
 document.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('reveal-ready');
+
     const navbar = document.getElementById('navbar');
 
-    // Handle scroll for navbar styling
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('navbar-scrolled');
-        } else {
-            navbar.classList.remove('navbar-scrolled');
+    const updateNavbar = () => {
+        if (!navbar) {
+            return;
         }
-    });
 
-    // Add smooth reveal animation for feature cards (simple implementation)
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
+        navbar.classList.toggle('navbar-scrolled', window.scrollY > 40);
     };
 
-    const observer = new IntersectionObserver((entries, observer) => {
+    updateNavbar();
+    window.addEventListener('scroll', updateNavbar, { passive: true });
+
+    const deviceStage = document.querySelector('.device-stage');
+    const phoneFrames = document.querySelectorAll('.phone-frame');
+
+    const focusPhoneFrame = (activeFrame) => {
+        if (!deviceStage) {
+            return;
+        }
+
+        deviceStage.classList.add('is-focusing');
+        phoneFrames.forEach(frame => {
+            frame.classList.toggle('is-focused', frame === activeFrame);
+        });
+    };
+
+    const clearPhoneFrameFocus = () => {
+        if (!deviceStage) {
+            return;
+        }
+
+        deviceStage.classList.remove('is-focusing');
+        phoneFrames.forEach(frame => frame.classList.remove('is-focused'));
+    };
+
+    phoneFrames.forEach(frame => {
+        frame.setAttribute('tabindex', '0');
+        frame.addEventListener('pointerenter', () => focusPhoneFrame(frame));
+        frame.addEventListener('pointerleave', clearPhoneFrameFocus);
+        frame.addEventListener('focus', () => focusPhoneFrame(frame));
+        frame.addEventListener('blur', clearPhoneFrameFocus);
+    });
+
+    const revealItems = document.querySelectorAll('[data-reveal]');
+
+    if (!('IntersectionObserver' in window)) {
+        revealItems.forEach(item => item.classList.add('is-visible'));
+        return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('is-visible');
                 observer.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    }, {
+        rootMargin: '0px 0px -10% 0px',
+        threshold: 0.15
+    });
 
-    const featureCards = document.querySelectorAll('.feature-card');
-    featureCards.forEach((card, index) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-        observer.observe(card);
+    revealItems.forEach((item, index) => {
+        item.style.setProperty('--reveal-delay', `${Math.min(index * 80, 320)}ms`);
+        observer.observe(item);
     });
 });
